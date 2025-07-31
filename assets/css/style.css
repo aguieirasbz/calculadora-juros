@@ -1,0 +1,62 @@
+/* ========================================= */
+/* ESTILOS GERAIS (TEMA FINANCEIRO)          */
+/* ========================================= */
+:root {
+    --primary-color: #004d40; /* Verde escuro */
+    --secondary-color: #00796b; /* Verde médio */
+    --accent-color: #4db6ac; /* Verde claro */
+    --text-color: #212121;
+    --light-gray: #f5f5f5;
+    --border-color: #e0e0e0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; background-color: var(--light-gray); color: var(--text-color); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.main-header { background: var(--primary-color); color: white; padding: 40px 0; text-align: center; margin-bottom: 40px; }
+.main-header h1 { font-size: 2.5rem; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 15px; }
+.main-header p { font-size: 1.2rem; color: #b2dfdb; }
+.header-icon { width: 40px; height: 40px; filter: invert(1); }
+.header-back-link { color: #b2dfdb; text-decoration: none; transition: color 0.2s; }
+.header-back-link:hover { color: #fff; }
+.main-footer { text-align: center; padding: 30px 0; margin-top: 50px; background-color: #263238; color: #cfd8dc; }
+.main-footer a { color: #90a4ae; }
+
+/* ========================================= */
+/* ESTILOS DA PÁGINA INICIAL (index.html)    */
+/* ========================================= */
+.main-layout-grid { display: grid; grid-template-columns: auto 1fr auto; gap: 30px; max-width: 1440px; margin: 0 auto; padding: 0 20px; }
+.ad-placeholder-skyscraper { width: 160px; height: 600px; background: #fff; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; text-align: center; color: #bdbdbd; border-radius: 8px; }
+.ad-placeholder-leaderboard { width: 100%; min-height: 90px; background: #fff; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; margin: 0 auto 40px auto; color: #bdbdbd; }
+.hero-section { background-color: #fff; padding: 40px; text-align: center; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.hero-section h2 { font-size: 1.8rem; margin-bottom: 15px; }
+.hero-section p { font-size: 1.1rem; color: #757575; margin-bottom: 30px; }
+.hero-button { background-color: var(--secondary-color); color: white; text-decoration: none; padding: 15px 30px; border-radius: 5px; font-size: 1.2rem; font-weight: 500; transition: background-color 0.2s; border: none; cursor: pointer; }
+.hero-button:hover { background-color: var(--primary-color); }
+.why-us { padding: 20px 0; }
+.section-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 40px; }
+.features-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.feature-item { background-color: #fff; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.feature-icon { color: var(--secondary-color); width: 48px; height: 48px; margin-bottom: 15px; }
+.feature-item h3 { margin-bottom: 10px; color: var(--primary-color); }
+.feature-item p { color: #757575; }
+
+/* ========================================= */
+/* ESTILOS DA CALCULADORA (calculator.html) */
+/* ========================================= */
+.calculator-layout { display: grid; grid-template-columns: 1fr; gap: 40px; }
+@media(min-width: 992px) { .calculator-layout { grid-template-columns: 400px 1fr; } }
+.calculator-form { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #616161; }
+.form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1rem; }
+.form-group.row { display: flex; gap: 15px; align-items: flex-end; }
+.form-group.row .col { flex: 1; }
+.results-panel { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.results-summary { margin-bottom: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center; }
+.result-box h3 { font-size: 1rem; color: #757575; margin-bottom: 5px; font-weight: 400; }
+.result-box p { font-size: 1.8rem; font-weight: 500; color: var(--primary-color); }
+.result-box p.positive { color: #2e7d32; }
+.chart-container { position: relative; width: 100%; height: 400px; }
+
+/* Responsividade */
+@media (max-width: 1200px) { .main-layout-grid { grid-template-columns: 1fr; } .sidebar-left, .sidebar-right { display: none; } }
